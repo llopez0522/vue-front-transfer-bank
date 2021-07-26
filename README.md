@@ -1,4 +1,4 @@
-# prueba
+# vue transfer bank
 
 ## Project setup
 ```
