@@ -19,7 +19,11 @@
         </el-form-item>
         <el-form-item
           prop="password"
-          :rules="[{ required: true, message: 'Contraseña requerido', trigger: 'blur' }]"
+          :rules="[
+            { max: 4, message: 'Solo esta permitidos un máximo de 4 digitos' },
+            { pattern: /^([0-9])*$/, message: 'Solo se permiten digitos.' },
+            { required: true, message: 'Contraseña requerido', trigger: 'blur' }
+          ]"
         >
           <el-input
             v-model="ruleForm.password"
