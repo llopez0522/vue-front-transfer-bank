@@ -1,0 +1,29 @@
+border-radius(n)
+  -webkit-border-radius n
+  -moz-border-radius n
+  -ms-border-radius n
+  -o-border-radius n
+  border-radius n
+background-color(color)
+  background-color color
+breakpoint(breakpoints)
+  conditions = ()
+  for breakpoint in breakpoints
+    push(conditions, media_queries[breakpoint])
+  conditions = join(", ", conditions)
+  @media conditions
+    {block}
+media_queries = {
+  xs: "only screen and (min-width: 200px) and (max-width: 575.98px)", // Extra small devices (portrait phones, less than 576px)
+  sm: "only screen and (min-width: 576px) and (max-width: 767.98px)", // Small devices (landscape phones, 576px and up)
+  md: "only screen and (min-width: 768px) and (max-width: 991.98px)", // Medium devices (tablets, 768px and up)
+  lg: "only screen and (min-width: 992px) and (max-width: 1199.98px)", // Large devices (desktops, 992px and up)
+  xl: "only screen and (min-width: 1200px) and (max-width: 1366.98px)", // Extra large devices (large desktops, 1200px and up)
+  xxl: "only screen and (min-width: 1366px) and (max-width: 1600px)"
+
+  //xs: "only screen and (max-width: 575.98px)", // Extra small devices (portrait phones, less than 576px)
+  //sm: "only screen and (min-width: 576px) and (max-width: 767.98px)", // Small devices (landscape phones, 576px and up)
+  //md: "only screen and (min-width: 768px) and (max-width: 991.98px)", // Medium devices (tablets, 768px and up)
+  //lg: "only screen and (min-width: 992px) and (max-width: 1366.98px)", // Large devices (desktops, 992px and up)
+  //xl: "only screen and (min-width: 1600px)" // Extra large devices (large desktops, 1200px and up)
+}

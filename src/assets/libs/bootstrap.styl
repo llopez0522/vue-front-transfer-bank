@@ -1,0 +1,152 @@
+@import "mixins.styl";
+.container
+  width 100%
+  padding-right 15px
+  padding-left 15px
+  margin-right auto
+  margin-left auto
+  +breakpoint(xs)
+    max-width 540px
+  +breakpoint(sm)
+    max-width 540px
+  +breakpoint(md)
+    max-width 720px
+  +breakpoint(lg)
+    max-width 960px
+  +breakpoint(xl)
+    max-width 1140px
+.d
+  &-flex
+    display flex
+  &-inline-flex
+    display inline-flex
+  &-sm
+    &-flex
+      +breakpoint(sm)
+        display flex
+    &-none
+      +breakpoint(sm)
+        display none
+    &-inline
+      +breakpoint(sm)
+        display inline
+      &-block
+        +breakpoint(sm)
+          display inline-block
+      &-flex
+        +breakpoint(sm)
+          display inline-flex
+    &-block
+      +breakpoint(sm)
+        display block
+    &-table
+      +breakpoint(sm)
+        display table
+      &-row
+        +breakpoint(sm)
+          display table-row
+      &-cell
+        +breakpoint(sm)
+          display table-cell
+.flex
+  &-row
+    flex-direction row
+  &-column
+    flex-direction column
+    &-reverse
+      flex-direction column-reverse
+  &-reverse
+    flex-direction row-reverse
+  &-wrap
+    flex-wrap wrap
+    &-reverse
+      flex-wrap wrap-reverse
+  &-nowrap
+    flex-wrap nowrap
+.justify-content
+  &-start
+    justify-content flex-start
+  &-end
+    justify-content flex-end
+  &-center
+    justify-content center
+  &-between
+    justify-content space-between
+  &-around
+    justify-content space-around
+  &-evenly
+    justify-content space-evenly
+.align
+  &-items
+    &-start
+      align-items flex-start
+    &-end
+      align-items flex-end
+    &-center
+      align-items center
+    &-baseline
+      align-items baseline
+    &-stretch
+      align-items stretch
+  &-content
+    &-start
+      align-content flex-start
+    &-end
+      align-content flex-end
+    &-center
+      align-content center
+    &-between
+      align-content space-between
+    &-around
+      align-content space-around
+    &-stretch
+      align-content stretch
+  &-self
+    &-auto
+      align-self auto
+    &-start
+      align-self flex-start
+    &-end
+      align-self flex-end
+    &-center
+      align-self center
+    &-baseline
+      align-self baseline
+    &-stretch
+      align-self stretch
+.text
+  &-lowercase
+    text-transform lowercase
+  &-uppercase
+    text-transform uppercase
+  &-capitalize
+    text-transform capitalize
+  &-center
+    text-align center
+  &-right
+    text-align right
+  &-left
+    text-align left
+  &-white
+    color white
+  &-black
+    color black
+  &-decoration
+    text-decoration none
+.font
+  &-weight
+    &-bold
+      font-weight bold
+    &-normal
+      font-weight normal
+.visible
+  visibility visible
+.invisible
+  visibility hidden
+.float
+  &-left
+    float left
+  &-right
+    float right
+  &-none
+    float none
