@@ -22,3 +22,6 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### Create File Environment
+Create .env.local file The root of the project with the following variable VUE_APP_BASE_URL
